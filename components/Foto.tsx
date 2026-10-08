@@ -12,10 +12,12 @@ type Props = {
   parallax?: boolean;
 };
 
+export const fotoExiste = (src: string) => existsSync(join(process.cwd(), "public", "fotos", src));
+
 // Mostra a foto oficial se ela existir em /public/fotos. Se ainda não foi baixada,
 // renderiza um placeholder com o símbolo da marca para nunca exibir imagem quebrada.
 export function Foto({ src, alt, sizes, className, rotulo, priority, parallax }: Props) {
-  const existe = existsSync(join(process.cwd(), "public", "fotos", src));
+  const existe = fotoExiste(src);
   return (
     <div className={`foto ${className ?? ""}`}>
       {existe ? (

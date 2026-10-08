@@ -26,12 +26,12 @@ export function Unidade() {
         <div className="galeria">
           {fotos.unidade.map((f, i) => (
             <Foto
-              key={f}
-              src={f}
+              key={f.src}
+              src={f.src}
               className={`g${i + 1}`}
-              alt={`Unidade Ginástica do Cérebro Camboriú, foto ${i + 1}`}
+              alt={f.alt}
               rotulo={`Unidade Camboriú · 0${i + 1}`}
-              sizes="(max-width: 760px) 50vw, 50vw"
+              sizes={i === 0 || i === 5 ? "(max-width: 760px) 100vw, 66vw" : "(max-width: 760px) 50vw, 50vw"}
               parallax
             />
           ))}

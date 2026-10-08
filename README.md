@@ -17,9 +17,11 @@ npm run dev        # http://localhost:3000
 
 ## Fotos
 
-Antes de cada build, `scripts/baixar-fotos.mjs` baixa as fotos oficiais publicadas pela rede (unidade Camboriú, crianças, adultos, +60, soroban, apostilas, jogos) para `public/fotos`. Se alguma não baixar, o site mostra um placeholder com o símbolo da marca, nunca imagem quebrada.
+As fotos já estão commitadas em `public/fotos`. A seção da unidade usa só fotos de Camboriú (fachada, recepção, sala de espera e sala de aula). Método, públicos, depoimentos e o retrato do Dr. Roberto Lent usam fotos oficiais publicadas pela rede.
 
-Para trocar ou adicionar fotos próprias, basta salvar o arquivo em `public/fotos` com o mesmo nome listado em `lib/site.ts` e commitar. Rodar `npm run fotos` localmente baixa tudo de uma vez para você revisar e commitar.
+Para trocar uma foto, salve o arquivo novo em `public/fotos` com o mesmo nome listado em `lib/site.ts` e commite. Se faltar alguma, o site mostra um placeholder com o símbolo da marca, nunca imagem quebrada.
+
+A Action `Baixar fotos oficiais` (aba Actions do GitHub) baixa de novo do site da rede qualquer foto da lista em `scripts/baixar-fotos.mjs` que não estiver no repositório.
 
 ## Onde editar
 

@@ -1,4 +1,7 @@
+import Image from "next/image";
+import { fotos } from "@/lib/site";
 import { SetaDiagonal } from "../Icones";
+import { fotoExiste } from "../Foto";
 
 const ESTUDOS = [
   {
@@ -44,7 +47,15 @@ export function Ciencia() {
               transferência de habilidades. Não basta melhorar em jogos específicos; é preciso que essas melhorias se
               traduzam em benefícios para a vida real.”
             </p>
-            <cite>Dr. Roberto Lent · Neurocientista, professor da UFRJ e autor de “Cem Bilhões de Neurônios”</cite>
+            <footer className="citacao-autor">
+              {fotoExiste(fotos.robertoLent) && (
+                <Image src={`/fotos/${fotos.robertoLent}`} alt="Dr. Roberto Lent" width={64} height={64} />
+              )}
+              <cite>
+                <b>Dr. Roberto Lent</b>
+                Neurocientista, professor da UFRJ e autor de “Cem Bilhões de Neurônios”
+              </cite>
+            </footer>
           </blockquote>
         </div>
 

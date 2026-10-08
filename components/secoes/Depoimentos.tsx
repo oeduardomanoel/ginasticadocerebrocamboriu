@@ -1,26 +1,32 @@
+import Image from "next/image";
 import { Estrela } from "../Icones";
+import { fotoExiste } from "../Foto";
 
 const DEPOIMENTOS = [
   {
     nome: "Carla Mendes",
+    foto: "depo-carla.webp",
     quem: "Mãe do Miguel, 9 anos",
     texto:
       "Meu filho é super curioso e inquieto, e eu buscava algo que canalizasse essa energia de forma produtiva. A GC foi perfeita! Ele se diverte enquanto treina o cérebro e, o melhor de tudo, está lendo melhor, mais concentrado e com raciocínio mais rápido.",
   },
   {
     nome: "Wanderley Pekin",
+    foto: "depo-wanderley.webp",
     quem: "Aluno, 75 anos",
     texto:
       "As práticas da GC estão sendo uma oportunidade de me tornar mais alerta e objetivo nas tarefas do cotidiano, deixando o raciocínio mais rápido e atento. Tenho aproveitado esses exercícios para deixar meu dia a dia mais fluido.",
   },
   {
     nome: "Rodrigo Silva",
+    foto: "depo-rodrigo.webp",
     quem: "Pai do Lucas, 11 anos",
     texto:
       "O Lucas é autista e sempre teve dificuldade com atenção, organização e interações sociais. Quando conhecemos a Ginástica do Cérebro, confesso que fiquei receoso se ele iria se adaptar. Mas foi surpreendente.",
   },
   {
     nome: "Patrícia Ruic",
+    foto: "depo-patricia.jpg",
     quem: "Aluna, 70 anos",
     texto:
       "Estou na Ginástica do Cérebro há muito tempo, desde antes da pandemia. Pausei, voltei e não fico sem. Tem me feito muito bem, estar aqui exercitando meu cérebro me anima. Encontro as amigas e damos muitas risadas.",
@@ -49,7 +55,11 @@ export function Depoimentos() {
               <blockquote>{d.texto}</blockquote>
               <footer>
                 <span className="avatar" aria-hidden="true">
-                  {d.nome.charAt(0)}
+                  {fotoExiste(d.foto) ? (
+                    <Image src={`/fotos/${d.foto}`} alt="" width={46} height={46} />
+                  ) : (
+                    d.nome.charAt(0)
+                  )}
                 </span>
                 <figcaption>
                   <b>{d.nome}</b>

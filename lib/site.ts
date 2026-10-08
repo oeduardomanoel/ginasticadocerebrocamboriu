@@ -43,21 +43,22 @@ export function whatsLink(texto = "Olá! Gostaria de agendar uma aula experiment
 // Fotos oficiais. O script scripts/baixar-fotos.mjs baixa cada uma para /public/fotos.
 // Enquanto o arquivo não existir, o componente <Foto> mostra um placeholder com a identidade da marca.
 export const fotos = {
+  // Só fotos da unidade Camboriú nesta lista. Ordem = ordem da galeria.
   unidade: [
-    "unidade-1.jpg",
-    "unidade-2.jpg",
-    "unidade-3.jpg",
-    "unidade-4.jpg",
-    "unidade-5.jpg",
-    "unidade-6.jpg",
+    { src: "unidade-2.jpg", alt: "Fachada da Ginástica do Cérebro Camboriú" },
+    { src: "unidade-5.jpg", alt: "Parede com a frase Cuidar do cérebro é cuidar de toda a vida" },
+    { src: "unidade-3.jpg", alt: "Recepção da unidade Camboriú" },
+    { src: "unidade-1.jpg", alt: "Entrada da unidade na Rua Manoel Anastácio Pereira" },
+    { src: "unidade-4.jpg", alt: "Sala de espera com a identidade da Ginástica do Cérebro" },
+    { src: "unidade-6.jpg", alt: "Sala de aula com mesa coletiva, soroban e jogos" },
   ],
   criancas: "criancas.jpg",
   adultos: "adultos.webp",
   sessenta: "sessenta.jpg",
-  soroban: "soroban.webp",
+  soroban: "soroban.jpg",
   apostilas: "apostilas.webp",
   jogos: "jogos.webp",
-  ambiente: ["ambiente-1.webp", "ambiente-2.webp", "ambiente-3.webp", "ambiente-4.webp"],
+  robertoLent: "roberto-lent.jpg",
 };
 
 export const numeros = [
