@@ -43,6 +43,14 @@ const arquivos = {
   "fotos/depo-wanderley.webp": ["2026/01/img-18.webp"],
   "fotos/depo-rodrigo.webp": ["2026/01/img-16.webp"],
   "fotos/depo-patricia.png": ["2026/01/0110.png"],
+  "fotos/extra-lp.png": ["2026/01/foto8-ginastica-do-cerebro-lp.png"],
+  "fotos/extra-sala.png": ["2026/01/42E106CD-8B5A-4F4C-AF68-62DFD9754842.png"],
+  "fotos/extra-congresso.jpg": ["2026/01/Temos-um-presente-para-voceNo-Congresso-Pantanal-a-GC-@ginasticadocerebro-participou-pela-prime-1.jpg"],
+  "fotos/extra-video.jpg": ["2026/08/Capa-do-video-Ginastica-do-Cerebro.jpg"],
+  "fotos/extra-tdah.jpg": ["2026/08/Capa-do-video-TDAH-e-excesso-de-telas.jpg"],
+  "fotos/extra-set.webp": ["2026/09/fsdf-1-q90.webp"],
+  "fotos/extra-design.png": ["2026/01/Design-sem-nome-1.png"],
+  "fotos/extra-1.png": ["2026/01/1.png"],
 };
 
 const cabecalhos = {
