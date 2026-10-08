@@ -1,0 +1,38 @@
+name: Baixar fotos oficiais
+
+# Baixa as fotos publicadas pela rede Ginástica do Cérebro e commita em public/fotos.
+# Rode manualmente em Actions > "Baixar fotos oficiais" > Run workflow,
+# ou automaticamente quando a lista do script mudar.
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - scripts/baixar-fotos.mjs
+      - .github/workflows/baixar-fotos.yml
+
+permissions:
+  contents: write
+
+jobs:
+  fotos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Baixar
+        run: node scripts/baixar-fotos.mjs
+      - name: Listar
+        run: ls -la public/fotos public/brand
+      - name: Commitar fotos novas
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/fotos public/brand
+          if git diff --cached --quiet; then
+            echo "Nenhuma foto nova."
+          else
+            git commit -m "Fotos oficiais da rede em public/fotos"
+            git push
+          fi

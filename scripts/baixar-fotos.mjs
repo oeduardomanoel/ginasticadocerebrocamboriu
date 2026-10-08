@@ -32,6 +32,17 @@ const arquivos = {
   "fotos/ambiente-2.webp": ["2026/01/2025-11-14-7.webp"],
   "fotos/ambiente-3.webp": ["2026/01/2025-12-09.webp"],
   "fotos/ambiente-4.webp": ["2026/01/2025-11-14-2.webp"],
+  "fotos/ambiente-5.webp": ["2026/01/2025-11-14-3.webp"],
+  "fotos/ambiente-6.webp": ["2026/01/2025-11-14-6.webp"],
+  "fotos/ambiente-7.webp": ["2026/01/2025-11-14.webp"],
+  "fotos/ambiente-8.webp": ["2026/01/2025-12-09-1.webp"],
+  "fotos/rede-alunos.webp": ["2026/01/img-11.webp"],
+  "fotos/rede-quem-somos.webp": ["2026/01/nova-1.webp"],
+  "fotos/rede-historia.webp": ["2026/01/img-21.webp"],
+  "fotos/depo-carla.webp": ["2026/01/img-17.webp"],
+  "fotos/depo-wanderley.webp": ["2026/01/img-18.webp"],
+  "fotos/depo-rodrigo.webp": ["2026/01/img-16.webp"],
+  "fotos/depo-patricia.png": ["2026/01/0110.png"],
 };
 
 const cabecalhos = {
